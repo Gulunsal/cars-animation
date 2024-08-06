@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araba Galerisi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <select id="car-selection">
+        <option value="" disabled selected>Araba Seçin</option>
+        <option value="electric">Tesla Model S (Elektrikli)</option>
+        <option value="gasoline">Toyota Corolla (Benzinli)</option>
+    </select>
+    <div id="car-container">
+        <div id="car">🚗</div>
+        <div id="car-info"></div>
+    </div>
+    <div id="controls" style="display: none;">
+        <button id="startButton">Başlat</button>
+        <button id="parkButton">Park Et</button>
+        <button id="chargeButton" style="display: none;">Şarj et</button>
+        <button id="refuelButton" style="display: none;">Benzin Doldur</button>
+        <button id="accelerateButton">Hızlan</button>
+        <button id="brakeButton">Fren Yap</button>
+        <button id="toggleLightsButton">Işıkları Aç/Kapat</button>
+        <button id="toggleDoorsButton">Kapıları Kilitle/Aç</button>
+        <button id="checkMaintenanceButton">Bakım Hatırlatıcısı</button>
+    </div>
+    <div id="info-container">
+        <div id="battery-info"></div>
+        <div id="fuel-info"></div>
+        <div id="speed-info"></div>
+        <div id="location-info"></div>
+        <div id="maintenance-info"></div>
+        <div id="light-status"></div>
+        <div id="door-status"></div>
+        <div id="tire-pressure-info"></div>
+    </div>
+    <div id="status-table">
+        <div class="table-section">
+            <table>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Durum</th>
+                </tr>
+                <tr>
+                    <td>Işıklar</td>
+                    <td id="table-light-status"></td>
+                </tr>
+                <tr>
+                    <td>Kapılar</td>
+                    <td id="table-door-status"></td>
+                </tr>
+                <tr>
+                    <td>Hız</td>
+                    <td id="table-speed-status"></td>
+                </tr>
+                <tr>
+                    <td>Bakım</td>
+                    <td id="table-maintenance-status"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="table-section">
+            <table>
+                <tr>
+                    <th>Özellik</th>
+                    <th>Durum</th>
+                </tr>
+                <tr>
+                    <td>Lastik Basıncı</td>
+                    <td id="table-tire-pressure-status"></td>
+                </tr>
+                <tr>
+                    <td>Şarj Durumu</td>
+                    <td id="table-battery-status"></td>
+                </tr>
+                <tr>
+                    <td>Benzin Durumu</td>
+                    <td id="table-fuel-status"></td>
+                </tr>
+                <tr>
+                    <td>Fren Durumu</td>
+                    <td id="table-brake-status"></td>
+                </tr>
+                <tr>
+                    <td>Lokasyon</td>
+                    <td id="table-location-status"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <audio id="engine-sound" src="audio/engine-sound.mp3"></audio>
+    <audio id="alert-sound" src="audio/alert-sound.mp3"></audio>
+    <script src="car.js"></script>
+</body>
+
+</html>
